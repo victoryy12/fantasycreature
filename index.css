@@ -1,1 +1,14 @@
+body {
+    background: rgb(233, 108, 77);
+    text-align: center;
+    
+ } 
+  /*should be lower but im just modifying what I had. Change font size, spacing, and color if needed*/
+ nav li {
+    display: inline-flex;
+    font-size: 34px;
+}
 
+ul li:hover{
+    color:blue;
+}
