@@ -16,4 +16,55 @@
         </ul>
     </nav>
     </header>
+        <main>
+        <section id="create-creature">
+            <h2>Create Your Own Fantasy Creature</h2>
+            <form id="creatureForm">
+                <label for="name">Creature Name:</label>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="type">Type:</label>
+                <select id="type" name="type">
+                    <option>Dragon</option>
+                    <option>Fairy</option>
+                    <option>Griffin</option>
+                    <option>Mermaid</option>
+                    <option>Original Creation</option>
+                </select><br>
+
+                <label for="powers">Special Powers:</label>
+                <input type="text" id="powers" name="powers"><br>
+
+                <label for="color">Color:</label>
+                <input type="color" id="color" name="color"><br>
+
+                <button type="submit">Create Creature</button>
+            </form>
+
+            <div id="creaturePreview"></div>
+        </section>
+    </main>
+
+    <script>
+        // JS to show preview
+        const form = document.getElementById('creatureForm');
+        const preview = document.getElementById('creaturePreview');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = form.name.value;
+            const type = form.type.value;
+            const powers = form.powers.value;
+            const color = form.color.value;
+
+            preview.innerHTML = `
+                <h3 style="color:${color}">${name}</h3>
+                <p><strong>Type:</strong> ${type}</p>
+                <p><strong>Powers:</strong> ${powers}</p>
+                <p><strong>Color:</strong> ${color}</p>
+            `;
+        });
+    </script>
+</body>
+</html>
 
