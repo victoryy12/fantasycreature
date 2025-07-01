@@ -32,13 +32,10 @@ nav li {
     margin: 0 15px;
     display: inline-flex;
     font-size: 34px;
-<<<<<<< HEAD
 }
 
 nav li:hover a{
     color:blue;
-=======
->>>>>>> 3a5e0527b24b1f1ddb0f109c3dce96359cc140b0
 }
 
 nav a {
