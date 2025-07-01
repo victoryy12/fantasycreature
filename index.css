@@ -4,10 +4,6 @@ body {
     
  } 
 
-
-ul li:hover{
-    color:blue;
-}
 body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #f2f2f2;
@@ -36,6 +32,10 @@ nav li {
     margin: 0 15px;
     display: inline-flex;
     font-size: 34px;
+}
+
+nav li:hover a{
+    color:blue;
 }
 
 nav a {
