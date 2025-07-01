@@ -3,11 +3,6 @@ body {
     text-align: center;
     
  } 
-  /*should be lower but im just modifying what I had. Change font size, spacing, and color if needed*/
- nav li {
-    display: inline-flex;
-    font-size: 34px;
-}
 
 ul li:hover{
     color:blue;
@@ -38,6 +33,8 @@ nav ul {
 
 nav li {
     margin: 0 15px;
+    display: inline-flex;
+    font-size: 34px;
 }
 
 nav a {
