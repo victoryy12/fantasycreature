@@ -1,69 +1,132 @@
+<!-- index.html -->
 <!DOCTYPE html>
-<link rel="stylesheet" href="index.css">
-<meta charset =" utf-8">
-<title> Main Page </title>
-<html>
-    
-    <body>
-        <header><h1>Fantasy Creature Encyclopedia</h1>
-        <nav>
-        <ul>
-            <!-- These are the tab placeholders for when we decide what the contents will be-->
-            <li><a href = "index.html">Menu</a></li>
-            <li><a href = "Creator.html">Creator</a></li>
-            <li><a href = "placeholder.html">placeholder3</a></li>
-            <li><a href = "placeholder.html">placeholder4</a></li>
-        </ul>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fantasy Creature Creator</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <h1>🦄 Welcome to the Fantasy Creature Creator</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="creatures.html">Creatures</a></li>
+        <li><a href="create.html">Create a Creature</a></li>
+        <li><a href="contact.html">Summon a Wizard</a></li>
+      </ul>
     </nav>
-    </header>
-    <main>
-        <section id="create-creature">
-            <h2>Create Your Own Fantasy Creature</h2>
-            <form id="creatureForm">
-                <label for="name">Creature Name:</label>
-                <input type="text" id="name" name="name" required><br>
+  </header>
+  <main>
+    <section>
+      <p>Create your own legendary companion or adopt one from our mythical collection. The realm awaits!</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Mythical Menagerie</p>
+  </footer>
+</body>
+</html>
 
-                <label for="type">Type:</label>
-                <select id="type" name="type">
-                    <option>Dragon</option>
-                    <option>Fairy</option>
-                    <option>Griffin</option>
-                    <option>Mermaid</option>
-                    <option>Original Creation</option>
-                </select><br>
+<!-- creatures.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Available Creatures</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <h1>🐲 Adopt a Legendary Creature</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="creatures.html">Creatures</a></li>
+        <li><a href="create.html">Create a Creature</a></li>
+        <li><a href="contact.html">Summon a Wizard</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="creature-gallery">
+      <article>
+        <img src="images/Fenrir.jpeg" alt="Fenrir">
+        <h2>Fenrir</h2>
+        <p>Species: Wolf God</p>
+        <p>Power: Strength of the moon</p>
+      </article>
+      <!-- Repeat articles for more creatures -->
+    </section>
+  </main>
+</body>
+</html>
 
-                <label for="powers">Special Powers:</label>
-                <input type="text" id="powers" name="powers"><br>
+<!-- create.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create a Creature</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <h1>✨ Design Your Own Creature</h1>
+  </header>
+  <main>
+    <form action="#" method="post">
+      <label for="name">Creature Name:</label>
+      <input type="text" id="name" name="name" required><br>
 
-                <label for="color">Color:</label>
-                <input type="color" id="color" name="color"><br>
+      <label for="species">Species/Type:</label>
+      <input type="text" id="species" name="species" required><br>
 
-                <button type="submit">Create Creature</button>
-            </form>
+      <label for="powers">Magical Abilities:</label><br>
+      <textarea id="powers" name="powers" rows="4" required></textarea><br>
 
-            <div id="creaturePreview"></div>
-        </section>
-    </main>
+      <label for="habitat">Habitat:</label>
+      <input type="text" id="habitat" name="habitat" required><br>
 
-    <script>
-        // JS to show preview
-        const form = document.getElementById('creatureForm');
-        const preview = document.getElementById('creaturePreview');
+      <label for="image">Upload Creature Image:</label>
+      <input type="file" id="image" name="image"><br><br>
 
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const name = form.name.value;
-            const type = form.type.value;
-            const powers = form.powers.value;
-            const color = form.color.value;
+      <input type="submit" value="Summon Creature">
+    </form>
+  </main>
+</body>
+</html>
 
-            preview.innerHTML = `
-                <h3 style="color:${color}">${name}</h3>
-                <p><strong>Type:</strong> ${type}</p>
-                <p><strong>Powers:</strong> ${powers}</p>
-                <p><strong>Color:</strong> ${color}</p>
-            `;
-        });
-    </script>
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Summon a Wizard</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <h1>🧙 Contact the High Wizard</h1>
+  </header>
+  <main>
+    <form action="#" method="post">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required><br>
+
+      <label for="email">Magic Mail (Email):</label>
+      <input type="email" id="email" name="email" required><br>
+
+      <label for="message">Scroll Message:</label><br>
+      <textarea id="message" name="message" rows="4" required></textarea><br>
+
+      <input type="submit" value="Send Owl">
+    </form>
+  </main>
 </body>
 </html>
