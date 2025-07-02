@@ -1,69 +1,34 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="index.css">
-<meta charset =" utf-8">
-<title> Main Page </title>
-<html>
-    
-    <body>
-        <header><h1>Fantasy Creature Encyclopedia</h1>
-        <nav>
-        <ul>
-            <!-- These are the tab placeholders for when we decide what the contents will be-->
-            <li><a href = "index.html">Menu</a></li>
-            <li><a href = "Creator.html">Creator</a></li>
-            <li><a href = "placeholder.html">placeholder3</a></li>
-            <li><a href = "placeholder.html">placeholder4</a></li>
-        </ul>
-    </nav>
-    </header>
-    <main>
-        <section id="create-creature">
-            <h2>Create Your Own Fantasy Creature</h2>
-            <form id="creatureForm">
-                <label for="name">Creature Name:</label>
-                <input type="text" id="name" name="name" required><br>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create a Creature</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <h1>✨ Design Your Own Creature</h1>
+  </header>
+  <main>
+    <form action="#" method="post">
+      <label for="name">Creature Name:</label>
+      <input type="text" id="name" name="name" required><br>
 
-                <label for="type">Type:</label>
-                <select id="type" name="type">
-                    <option>Dragon</option>
-                    <option>Fairy</option>
-                    <option>Griffin</option>
-                    <option>Mermaid</option>
-                    <option>Original Creation</option>
-                </select><br>
+      <label for="species">Species/Type:</label>
+      <input type="text" id="species" name="species" required><br>
 
-                <label for="powers">Special Powers:</label>
-                <input type="text" id="powers" name="powers"><br>
+      <label for="powers">Magical Abilities:</label><br>
+      <textarea id="powers" name="powers" rows="4" required></textarea><br>
 
-                <label for="color">Color:</label>
-                <input type="color" id="color" name="color"><br>
+      <label for="habitat">Habitat:</label>
+      <input type="text" id="habitat" name="habitat" required><br>
 
-                <button type="submit">Create Creature</button>
-            </form>
+      <label for="image">Upload Creature Image:</label>
+      <input type="file" id="image" name="image"><br><br>
 
-            <div id="creaturePreview"></div>
-        </section>
-    </main>
-
-    <script>
-        // JS to show preview
-        const form = document.getElementById('creatureForm');
-        const preview = document.getElementById('creaturePreview');
-
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const name = form.name.value;
-            const type = form.type.value;
-            const powers = form.powers.value;
-            const color = form.color.value;
-
-            preview.innerHTML = `
-                <h3 style="color:${color}">${name}</h3>
-                <p><strong>Type:</strong> ${type}</p>
-                <p><strong>Powers:</strong> ${powers}</p>
-                <p><strong>Color:</strong> ${color}</p>
-            `;
-        });
-    </script>
+      <input type="submit" value="Summon Creature">
+    </form>
+  </main>
 </body>
 </html>
