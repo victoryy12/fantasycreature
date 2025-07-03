@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create a Creature</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <h1>✨ Design Your Own Creature</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="creatures.html">Creatures</a></li>
+        <li><a href="create.html">Create a Creature</a></li>
+        <li><a href="contact.html">Summon a Wizard</a></li>
+      </ul>
+  </nav>
+  </header>
+  <main>
+    <form action="#" method="post">
+      <label for="name">Creature Name:</label>
+      <input type="text" id="name" name="name" required><br>
+
+      <label for="name">Creature Species:</label>
+      <select name="Species">
+        <option value="AsiaDragon">Asian Dragon</option>
+        <option value="EuroDragon">European Dragon</option>
+        <option value="Goblin">Goblin</option>
+        <option value="Mummy">Mummy</option>
+        <option value="Golem">Golem</option>
+        <option value="Banshee">Banshee</option>
+        <option value="RedCap">Red Cap</option>
+        <option value="Gollum">Gollum</option>
+        <option value="Roc">Roc</option>
+        <option value="Kraken">Kraken</option>
+      </select>
+
+      <label for="powers">Magical Abilities:</label><br>
+      <textarea id="powers" name="powers" rows="4" required></textarea><br>
+
+      <label for="Orign">Orign:</label>
+      <input type="text" id="Orign" name="Orign" required><br>
+
+      <label for="image">Upload Creature Image:</label>
+      <input type="file" id="image" name="image"><br><br>
+
+      <input type="submit" value="Summon Creature">
+    </form>
+  </main>
+</body>
+</html>
