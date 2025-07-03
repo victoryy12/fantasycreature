@@ -88,3 +88,42 @@ form input, form select, form button {
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+
+/* Creature Gallery Styling */
+.creature-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.creature-gallery article {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    overflow: hidden;
+}
+
+
+
+
+.creature-gallery article h2 {
+    color: rgb(139, 6, 6);
+    margin: 10px 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.creature-gallery article p {
+    margin: 8px 0;
+    color: #333;
+    font-size: 1em;
+    line-height: 1.4;
+
+}
