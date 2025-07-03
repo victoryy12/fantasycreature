@@ -11,6 +11,9 @@ body {
     margin: 0;
     padding: 0;
 }
+h1 {
+    font-size: 55px;
+}
 
 header {
     background-color: #4b0082;
