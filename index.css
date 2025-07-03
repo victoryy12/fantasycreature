@@ -11,6 +11,12 @@ body {
     margin: 0;
     padding: 0;
 }
+body { /* this is the background color of the page */
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgb(235, 230, 207) 50%, #f0dd8a 100%);
+    background-attachment: fixed;
+}
+
 h1 {
     font-size: 55px;
 }
@@ -20,8 +26,8 @@ header {
     padding: 80px;
     text-align: center;
     background-image: url('images/dragon-banner-gold-on-red-260nw-1973858180.webp'); /* if you have a better header picture replace */
-    background-size: contain; /* Changed from cover to contain to show more of the image */
-    background-position: top; /* Centers the image */
+    background-size: contain;
+    background-position: top;
     background-repeat: no-repeat; /* Prevents image from repeating */
     background-attachment: fixed; /* Keeps image fixed while scrolling */
     
@@ -91,6 +97,11 @@ form input, form select, form button {
     margin: 0 auto;
 }
 
+
+.creature-gallery article p strong {
+    color: #ff1515;   /* feel free to change the color or remove this*/
+}
+
 .creature-gallery article {
     background: white;
     border-radius: 12px;
@@ -105,8 +116,6 @@ form input, form select, form button {
     object-fit: contain;
     
 }
-
-
 
 .creature-gallery article h2 {
     color: rgb(139, 6, 6);
