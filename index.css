@@ -103,17 +103,18 @@ form input, form select, form button {
 }
 
 .creature-gallery article {
-    background: white;
+    background: linear-gradient(to top, white 0%, #aca792 100%); /* color of the creature boxes, feel free to change */
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(158, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(158, 0, 0, 0.25); /* background shadow of the creature boxes */
     padding: 20px;
     text-align: center;
-    border: 2px solid transparent;
+   
 }
 
-.creature-gallery article img{
+.creature-gallery article img{ 
     width: 100%;
     object-fit: contain;
+    border-radius: 12px;
     
 }
 
