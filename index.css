@@ -36,6 +36,7 @@ nav li {
 
 nav li:hover a{
     color:blue;
+    font-size: 45px;
 }
 
 nav a {
