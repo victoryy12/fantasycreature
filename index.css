@@ -17,6 +17,11 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
+    background-image: url('Fire.avif'); /* Replace with your image path */
+    background-size: cover; /* Makes image cover entire viewport */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image from repeating */
+    background-attachment: fixed; /* Keeps image fixed while scrolling */
 }
 
 nav ul {
@@ -24,7 +29,6 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    background-color: #5e2d91;
     margin: 0;
 }
 
@@ -36,6 +40,8 @@ nav li {
 
 nav li:hover a{
     color:blue;
+    transform: scale(1.15);
+    transition: all 0.25s ease;
 }
 
 nav a {
