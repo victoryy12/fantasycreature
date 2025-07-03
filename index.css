@@ -19,7 +19,7 @@ header {
     color: white;
     padding: 80px;
     text-align: center;
-    background-image: url('dragon-banner-gold-on-red-260nw-1973858180.webp'); /* if you have a better header picture replace */
+    background-image: url('images/dragon-banner-gold-on-red-260nw-1973858180.webp'); /* if you have a better header picture replace */
     background-size: contain; /* Changed from cover to contain to show more of the image */
     background-position: top; /* Centers the image */
     background-repeat: no-repeat; /* Prevents image from repeating */
