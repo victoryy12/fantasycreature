@@ -15,13 +15,14 @@ body {
 header {
     background-color: #4b0082;
     color: white;
-    padding: 20px;
+    padding: 80px;
     text-align: center;
     background-image: url('dragon-banner-gold-on-red-260nw-1973858180.webp'); /* if you have a better header picture replace */
-    background-size: cover; /* Makes image cover entire viewport */
-    background-position: center; /* Centers the image */
+    background-size: contain; /* Changed from cover to contain to show more of the image */
+    background-position: top; /* Centers the image */
     background-repeat: no-repeat; /* Prevents image from repeating */
     background-attachment: fixed; /* Keeps image fixed while scrolling */
+    
 }
 
 nav ul {
