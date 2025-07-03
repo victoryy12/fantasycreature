@@ -42,7 +42,7 @@ nav li {
 }
 
 nav li:hover a{
-    color:blue;
+    color:red;
     transform: scale(1.15);
     transition: all 0.25s ease;
 }
