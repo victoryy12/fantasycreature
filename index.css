@@ -80,14 +80,6 @@ form input, form select, form button {
     border: 1px solid #ccc;
 }
 
-#creaturePreview {
-    max-width: 400px;
-    margin: 20px auto;
-    background: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
 
 /* Creature Gallery Styling */
 .creature-gallery {
@@ -102,17 +94,16 @@ form input, form select, form button {
 .creature-gallery article {
     background: white;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(158, 0, 0, 0.2);
     padding: 20px;
     text-align: center;
-    transition: all 0.3s ease;
     border: 2px solid transparent;
-    overflow: hidden;
 }
 
 .creature-gallery article img{
     width: 100%;
     object-fit: contain;
+    
 }
 
 
