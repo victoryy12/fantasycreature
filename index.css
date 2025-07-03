@@ -110,6 +110,10 @@ form input, form select, form button {
     overflow: hidden;
 }
 
+.creature-gallery article img{
+    width: 100%;
+    object-fit: contain;
+}
 
 
 
