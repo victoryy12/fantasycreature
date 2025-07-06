@@ -25,7 +25,8 @@ header {
     color: white;
     padding: 80px;
     text-align: center;
-    background-image: url('images/dragon-banner-gold-on-red-260nw-1973858180.webp'); /* if you have a better header picture replace */
+    text-shadow: 4px 4px #000000;
+    background-image: url('images/Sunset.png'); /* if you have a better header picture replace */
     background-size: contain;
     background-position: top;
     background-repeat: no-repeat; /* Prevents image from repeating */
