@@ -19,12 +19,12 @@
   </nav>
   </header>
   <main>
-    <form action="#" method="post">
-      <label for="name">Creature Name:</label>
-      <input type="text" id="name" name="name" required><br>
-
-      <label for="name">Creature Species:</label>
-      <select name="Species">
+    <form id="infoForm" action="#" method="post">
+      <label for="creature">Creature Name:</label>
+      <input type="text" id="creature" name="name" required><br>
+    
+      <label for="species">Creature Species:</label>
+      <select id="species" name="species">
         <option value="AsiaDragon">Asian Dragon</option>
         <option value="EuroDragon">European Dragon</option>
         <option value="Goblin">Goblin</option>
@@ -35,19 +35,72 @@
         <option value="Gollum">Gollum</option>
         <option value="Roc">Roc</option>
         <option value="Kraken">Kraken</option>
-      </select>
-
-      <label for="powers">Magical Abilities:</label><br>
-      <textarea id="powers" name="powers" rows="4" required></textarea><br>
-
-      <label for="Orign">Orign:</label>
-      <input type="text" id="Orign" name="Orign" required><br>
-
-      <label for="image">Upload Creature Image:</label>
-      <input type="file" id="image" name="image"><br><br>
-
+      </select><br>
+    
+      <label for="ability">Magical Abilities:</label><br>
+      <textarea id="ability" name="powers" rows="4" required></textarea><br>
+    
+      <label for="origin">Origin:</label>
+      <input type="text" id="origin" name="origin" required><br>
+    
       <input type="submit" value="Summon Creature">
     </form>
-  </main>
+    
+    <div class="card" id="infoCard" style="display:none;">
+      <h2>Your Creature</h2>
+      <img id="creatureImage" src="" alt="Creature Image" style="max-width: 100%; display: none; margin-top: 10px;">
+      <p><strong>Name:</strong> <span id="creatureName"></span></p>
+      <p><strong>Species:</strong> <span id="speciesName"></span></p>
+      <p><strong>Ability:</strong> <span id="abilityName"></span></p>
+      <p><strong>Origin:</strong> <span id="originName"></span></p>
+    </div>
+    
+    <script>
+      const infoForm = document.getElementById('infoForm');
+      const infoCard = document.getElementById('infoCard');
+      const creatureName = document.getElementById('creatureName');
+      const speciesName = document.getElementById('speciesName');
+      const abilityName = document.getElementById('abilityName');
+      const originName = document.getElementById('originName');
+      const creatureImage = document.getElementById('creatureImage');
+
+    const speciesImages = {
+    AsiaDragon: "images/AsianDragon.jpeg",
+    EuroDragon: "images/EuropeanDragon.jpeg",
+    Goblin: "images/Goblin.jpeg",
+    Mummy: "images/Mummy.jpeg",
+    Golem: "images/Golem.jpeg",
+    Banshee: "images/Banshee.jpeg",
+    RedCap: "images/Red Cap.jpeg",
+    Gollum: "images/Gollum.jpeg",
+    Roc: "images/Roc.jpeg",
+    Kraken: "images/Kraken.jpeg"
+  };
+    
+      infoForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+    
+        const creature = document.getElementById('creature').value;
+        const species = document.getElementById('species').value;
+        const ability = document.getElementById('ability').value;
+        const origin = document.getElementById('origin').value;
+    
+        creatureName.textContent = creature;
+        speciesName.textContent = species;
+        abilityName.textContent = ability;
+        originName.textContent = origin;
+
+    const imageUrl = speciesImages[species];
+      if (imageUrl) {
+        creatureImage.src = imageUrl;
+        creatureImage.alt = species + " image";
+        creatureImage.style.display = "block";
+    } else {
+        creatureImage.style.display = "none"; 
+    }
+    
+        infoCard.style.display = 'block';
+      });
+    </script>
 </body>
 </html>
