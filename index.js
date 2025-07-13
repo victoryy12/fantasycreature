@@ -52,7 +52,7 @@ infoForm.addEventListener('submit', function(event) {
   const displaySpecies = speciesDisplayNames[species] || species;
 
   creatureName.textContent = creature;
-  speciesName.textContent = displaySpecies;
+  speciesName.textContent = speciesDisplayNames[species];
   abilityName.textContent = ability;
   originName.textContent = origin;
 
