@@ -75,9 +75,9 @@ form {
 
 form label {
     display: block;
-    margin-top: 10px;
+    margin: 10px 100px;
+    
 }
-
 form input, form select, form button {
     width: 100%;
     padding: 8px;
@@ -178,9 +178,5 @@ footer {
     max-width: 300px;
     background-color: white;
     text-align: center;
-  }
-  label {
-    display: block;
-    margin: 10px 0 5px;
   }
 
