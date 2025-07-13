@@ -17,13 +17,13 @@
         <li><a href="CreatureQuiz.html">Creature Quiz</a></li>
         <li><a href="contact.html">Summon a Wizard</a></li>
       </ul>
-  </nav>
+    </nav>
   </header>
   <main>
     <form id="infoForm" action="#" method="post">
       <label for="creature">Creature Name:</label>
       <input type="text" id="creature" name="name" required><br>
-    
+
       <label for="species">Creature Species:</label>
       <select id="species" name="species">
         <option value="AsianDragon">Asian Dragon</option>
@@ -37,16 +37,38 @@
         <option value="Roc">Roc</option>
         <option value="Kraken">Kraken</option>
       </select><br>
-    
+
       <label for="ability">Magical Abilities:</label><br>
-      <textarea id="ability" name="powers" rows="4" required></textarea><br>
-    
+      <select id="ability" name="powers" required>
+        <option value="">-- Select a Magical Ability --</option>
+        <option value="Fire Breath">Fire Breath</option>
+        <option value="Shapeshifting">Shapeshifting</option>
+        <option value="Flight">Flight</option>
+        <option value="Super Strength">Super Strength</option>
+        <option value="Immortality">Immortality</option>
+        <option value="Curse Casting">Curse Casting</option>
+        <option value="Elemental Control">Elemental Control</option>
+        <option value="Illusion Magic">Illusion Magic</option>
+        <option value="Resurrection">Resurrection</option>
+      </select><br>
+
       <label for="origin">Origin:</label>
-      <input type="text" id="origin" name="origin" required><br>
-    
+      <select id="origin" name="origin" required>
+        <option value="">-- Select an Origin --</option>
+        <option value="Norse">Norse</option>
+        <option value="Greek">Greek</option>
+        <option value="Japanese">Japanese</option>
+        <option value="Egyptian">Egyptian</option>
+        <option value="Celtic">Celtic</option>
+        <option value="Middle Earth">Middle Earth</option>
+        <option value="Germanic">Germanic</option>
+        <option value="Arabic">Arabic</option>
+        <option value="Fantasy Realm">Fantasy Realm</option>
+      </select><br>
+
       <input type="submit" value="Summon Creature">
     </form>
-    
+
     <div class="card" id="infoCard" style="display:none;">
       <h2>Your Creature</h2>
       <img id="creatureImage" src="" alt="Creature Image" style="max-width: 100%; display: none; margin-top: 10px;">
@@ -54,8 +76,10 @@
       <p><strong>Species:</strong> <span id="speciesName"></span></p>
       <p><strong>Ability:</strong> <span id="abilityName"></span></p>
       <p><strong>Origin:</strong> <span id="originName"></span></p>
-      <button id="back"> Go Back</button>
+      <button id="back">Go Back</button>
     </div>
+
     <script src="index.js" defer></script>
+  </main>
 </body>
 </html>
