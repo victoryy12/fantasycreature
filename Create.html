@@ -25,7 +25,8 @@
       <input type="text" id="creature" name="name" required><br>
 
       <label for="species">Creature Species:</label>
-      <select id="species" name="species">
+      <select id="species" name="species" required>
+        <option value="">-- Select a species --</option>
         <option value="AsianDragon">Asian Dragon</option>
         <option value="EuropeanDragon">European Dragon</option>
         <option value="Goblin">Goblin</option>
@@ -81,5 +82,8 @@
 
     <script src="index.js" defer></script>
   </main>
+      <footer>
+        <p>&copy; 2025 Fantasy Creature Encyclopedia. All rights reserved.</p>
+    </footer>
 </body>
 </html>

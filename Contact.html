@@ -1,34 +1,53 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="index.css">
-<meta charset =" utf-8">
-<title> Main Page </title>
-<html>
-    <body>
-        <header><h1>🧙 Contact the High Wizard</h1>
-        <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="creatures.html">Creatures</a></li>
-            <li><a href="create.html">Create a Creature</a></li>
-            <li><a href="CreatureQuiz.html">Creature Quiz</a></li>
-            <li><a href="contact.html">Summon a Wizard</a></li>
-        </ul>
-        </nav>
-        </header>
-        
-    <main>
-      <form action="form-viewer.php" method="Get">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" required><br>
-  
-        <label for="email">Magic Mail (Email):</label>
-        <input type="email" id="email" name="email" required><br>
-  
-        <label for="message">Scroll Message:</label><br>
-        <textarea id="message" name="message" rows="4" required></textarea><br>
-  
-        <input type="submit" value="Send Owl">
-      </form>
-    </main>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Main Page</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <h1>🧙 Contact the High Wizard</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="creatures.html">Creatures</a></li>
+        <li><a href="create.html">Create a Creature</a></li>
+        <li><a href="CreatureQuiz.html">Creature Quiz</a></li>
+        <li><a href="contact.html">Summon a Wizard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <form action="form-viewer.php" method="get">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required><br>
+
+      <label for="email">Magic Mail (Email):</label>
+      <input type="email" id="email" name="email" required><br>
+
+      <label for="message">Scroll Message:</label><br>
+      <textarea id="message" name="message" rows="4" required></textarea><br>
+
+      <input type="submit" value="Send Owl">
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Fantasy Creature Encyclopedia. All rights reserved.</p>
+  </footer>
+  <style>
+    footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9rem;
+    border-top: 4px solid #888;
+}
+  </style>
+</body>
 </html>
+

@@ -8,35 +8,16 @@ const creatureImage = document.getElementById('creatureImage');
 const back = document.getElementById('back');
 
 const speciesImages = {
-  AsianDragon: "images/AsianDragon.jpeg",
-  EuropeanDragon: "images/EuropeanDragon.jpeg",
-  Goblin: "images/Goblin.jpeg",
-  Mummy: "images/Mummy.jpeg",
-  Golem: "images/Golem.jpeg",
-  Banshee: "images/Banshee.jpeg",
-  RedCap: "images/RedCap.jpeg",
-  Gollum: "images/Gollum.jpeg",
-  Roc: "images/Roc.jpeg",
-  Kraken: "images/Kraken.jpeg"
-};
-
-const speciesDisplayNames = {
-  AsianDragon: "Asian Dragon",
-  EuropeanDragon: "European Dragon",
-  Goblin: "Goblin",
-  Mummy: "Mummy",
-  Golem: "Golem",
-  Banshee: "Banshee",
-  RedCap: "Red Cap",
-  Gollum: "Gollum",
-  Roc: "Roc",
-  Kraken: "Kraken"
-};
-
-//lowercase key map
-const speciesKeyMap = {};
-for (const key in speciesImages) {
-  speciesKeyMap[key.toLowerCase()] = key;
+AsianDragon: "images/AsianDragon.jpeg",
+EuropeanDragon: "images/EuropeanDragon.jpeg",
+Goblin: "images/Goblin.jpeg",
+Mummy: "images/Mummy.jpeg",
+Golem: "images/Golem.jpeg",
+Banshee: "images/Banshee.jpeg",
+RedCap: "images/RedCap.jpeg",
+Gollum: "images/Gollum.jpeg",
+Roc: "images/Roc.jpeg",
+Kraken: "images/Kraken.jpeg"
 }
 
 infoForm.addEventListener('submit', function(event) {
@@ -47,30 +28,38 @@ infoForm.addEventListener('submit', function(event) {
   const ability = document.getElementById('ability').value;
   const origin = document.getElementById('origin').value;
 
-  //lowercase key map
-  const speciesKey = speciesKeyMap[speciesRaw.trim().toLowerCase()];
-  const displaySpecies = speciesDisplayNames[species] || species;
+const speciesDisplayNames = {
+AsianDragon: "Asian Dragon",
+EuropeanDragon: "Euorpean Dragon",
+Goblin: "Goblin",
+Mummy: "Mummy",
+Golem: "Golem",
+Banshee: "Banshee",
+Redcap: "Red Cap",
+Gollum: "Gollum",
+Roc: "Roc",
+Kraken: "Kraken"
+}
+
+  const displaySpecies = speciesDisplayNames[species];
 
   creatureName.textContent = creature;
   speciesName.textContent = speciesDisplayNames[species];
   abilityName.textContent = ability;
   originName.textContent = origin;
 
-  const imageUrl = speciesImages[species];
-  if (imageUrl) {
-    creatureImage.src = imageUrl;
-    creatureImage.alt = species + " image";
-    creatureImage.style.display = "block";
-  } else {
-    creatureImage.style.display = "none";
-  }
+const imageUrl = speciesImages[species];
+  creatureImage.src = imageUrl;
+  creatureImage.alt = species + " image";
+  creatureImage.style.display = "block";
 
-  infoForm.style.display = 'none';
+infoForm.style.display = 'none';
+
+  infoCard.style.display = 'block';
   infoCard.style.display = 'block';
 });
 
-back.addEventListener('click', function () {
-  infoCard.style.display = 'none';
-  infoForm.style.display = 'block';
+back.addEventListener('click', function() {
+    infoCard.style.display = 'none';    
+    infoForm.style.display = 'block';
 });
-

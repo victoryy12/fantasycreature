@@ -1,20 +1,21 @@
-body {
-    background: rgb(233, 108, 77);
-    text-align: center;   
- } 
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
 
+main {
+  flex: 1;
+}
 body {
     font-family: 'Segoe UI', sans-serif;
     text-align: center;
-    background-color: #f2f2f2;
-    color: #333;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgb(175, 127, 234) 10%, #f0d18a 100%);
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
-}
-body { /* this is the background color of the page */
-    min-height: 100vh;
-    background: linear-gradient(to bottom, rgb(235, 230, 207) 50%, #f0dd8a 100%);
-    background-attachment: fixed;
 }
 
 h1 {
@@ -96,8 +97,8 @@ form input, form select, form button {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    click
 }
-
 
 .creature-gallery article p strong {
     color: #ff1515;   /* feel free to change the color or remove this*/
@@ -179,5 +180,58 @@ footer {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(158, 0, 0, 0.25);
   }
-  
+
+.quiz-container {
+      max-width: 100%;
+      margin: 40px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+   }
+.question {
+      margin-bottom: 20px;
+}
+
+.question input[type="radio"] {
+  display: none;
+}
+
+.question h3 {
+      margin-bottom: 10px;
+}
+
+.question label {
+  display: block;
+  padding: 12px 16px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s;
+  position: relative;
+  font-size: 1rem;
+  background-color: white;
+}
+
+.question input[type="radio"]:checked + span,
+.question label:has(input[type="radio"]:checked) {
+  border-color: rgb(175, 127, 234);
+  background-color: #e6f0ff;
+}
+
+.result {
+  margin-top: 20px;         
+  padding: 12px 16px;        
+  background: #f0f8ff;     
+  border: 1px solid #888;  
+  border-radius: 8px;       
+  display: none;
+  text-align: center;
+  font-size: 0.9rem;         
+  max-width: 400px;          
+  margin-left: auto;
+  margin-right: auto;
+}
+
 

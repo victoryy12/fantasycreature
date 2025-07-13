@@ -4,35 +4,6 @@
   <meta charset="UTF-8">
   <title>What Legendary Creature Are You?</title>
   <link rel="stylesheet" href="index.css">
-  <style>
-    .quiz-container {
-      max-width: 700px;
-      margin: 40px auto;
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.1);
-    }
-    .question {
-      margin-bottom: 20px;
-    }
-    .question h3 {
-      margin-bottom: 10px;
-    }
-    .question label {
-      display: block;
-      margin: 6px 0;
-    }
-    .result {
-      margin-top: 30px;
-      padding: 20px;
-      background: #f0f8ff;
-      border: 2px dashed #888;
-      border-radius: 10px;
-      display: none;
-      text-align: center;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -50,40 +21,71 @@
 
   <main class="quiz-container">
     <form id="quizForm">
-      <div class="question">
+      <div class="question" id ="question1">
         <h3>1. What best describes your personality?</h3>
         <label><input type="radio" name="q1" value="Phoenix"> Bold and resilient</label>
         <label><input type="radio" name="q1" value="Goblin"> Mischievous and clever</label>
         <label><input type="radio" name="q1" value="Kraken"> Quiet but powerful</label>
         <label><input type="radio" name="q1" value="Werewolf"> Loyal with a wild side</label>
+        <button type="button" class="next-btn">Next</button>
       </div>
 
-      <div class="question">
+      <div class="question" id ="question2">
         <h3>2. What's your ideal environment?</h3>
         <label><input type="radio" name="q2" value="AsianDragon"> Floating among clouds</label>
         <label><input type="radio" name="q2" value="Fenrir"> Deep in the forest</label>
         <label><input type="radio" name="q2" value="Mummy"> Ancient temples</label>
         <label><input type="radio" name="q2" value="Roc"> Soaring through open skies</label>
+        <button type="button" class="next-btn">Next</button>
       </div>
 
-      <div class="question">
+      <div class="question" id ="question3">
         <h3>3. How do you handle conflict?</h3>
         <label><input type="radio" name="q3" value="Oni"> Charge head-on with power</label>
         <label><input type="radio" name="q3" value="Banshee"> Express it emotionally</label>
         <label><input type="radio" name="q3" value="EuropeanDragon"> Strategically and with grace</label>
         <label><input type="radio" name="q3" value="RedCap"> Ruthless and efficient</label>
+        <button type="button" class="next-btn">Next</button>
       </div>
 
-      <div class="question">
+      <div class="question" id ="question4">
         <h3>4. Choose a magical trait:</h3>
         <label><input type="radio" name="q4" value="Golem"> Unshakable strength</label>
         <label><input type="radio" name="q4" value="Phoenix"> Immortality</label>
         <label><input type="radio" name="q4" value="AsianDragon"> Wisdom and good fortune</label>
         <label><input type="radio" name="q4" value="Goblin"> Shapeshifting</label>
+        <button type="submit">Reveal My Creature!</button>
       </div>
-
-      <button type="submit">Reveal My Creature!</button>
     </form>
+  <script>
+var questions = document.querySelectorAll('.question');
+var nextButtons = document.querySelectorAll('.next-btn');
+
+var currentQuestion = 0;
+
+showQuestion(currentQuestion);
+
+function showQuestion(index) {
+  for (var i = 0; i < questions.length; i++) {
+    var q = questions[i];
+    if (i === index) {
+      q.style.display = 'block';
+    } else {
+      q.style.display = 'none';
+    }
+  }
+}
+
+for (var i = 0; i < nextButtons.length; i++) {
+  (function(index) {
+    var btn = nextButtons[index];
+    btn.addEventListener('click', function() {
+      currentQuestion++;
+      showQuestion(currentQuestion);
+    });
+  })(i);
+}
+</script>
 
     <div class="result" id="result">
       <h2>You are a <span id="creatureName"></span>! 🐾</h2>
@@ -179,5 +181,8 @@
       document.getElementById("result").style.display = "block";
     });
   </script>
+      <footer>
+        <p>&copy; 2025 Fantasy Creature Encyclopedia. All rights reserved.</p>
+    </footer>
 </body>
 </html>
