@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>What Legendary Creature Are You?</title>
+  <link rel="stylesheet" href="index.css">
+  <style>
+    .quiz-container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question h3 {
+      margin-bottom: 10px;
+    }
+    .question label {
+      display: block;
+      margin: 6px 0;
+    }
+    .result {
+      margin-top: 30px;
+      padding: 20px;
+      background: #f0f8ff;
+      border: 2px dashed #888;
+      border-radius: 10px;
+      display: none;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🧙 Which Legendary Creature Are You Most Compatible With?</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="creatures.html">Creatures</a></li>
+        <li><a href="create.html">Create a Creature</a></li>
+        <li><a href="contact.html">Summon a Wizard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="quiz-container">
+    <form id="quizForm">
+      <div class="question">
+        <h3>1. What best describes your personality?</h3>
+        <label><input type="radio" name="q1" value="Phoenix"> Bold and resilient</label>
+        <label><input type="radio" name="q1" value="Goblin"> Mischievous and clever</label>
+        <label><input type="radio" name="q1" value="Kraken"> Quiet but powerful</label>
+        <label><input type="radio" name="q1" value="Werewolf"> Loyal with a wild side</label>
+      </div>
+
+      <div class="question">
+        <h3>2. What's your ideal environment?</h3>
+        <label><input type="radio" name="q2" value="AsianDragon"> Floating among clouds</label>
+        <label><input type="radio" name="q2" value="Fenrir"> Deep in the forest</label>
+        <label><input type="radio" name="q2" value="Mummy"> Ancient temples</label>
+        <label><input type="radio" name="q2" value="Roc"> Soaring through open skies</label>
+      </div>
+
+      <div class="question">
+        <h3>3. How do you handle conflict?</h3>
+        <label><input type="radio" name="q3" value="Oni"> Charge head-on with power</label>
+        <label><input type="radio" name="q3" value="Banshee"> Express it emotionally</label>
+        <label><input type="radio" name="q3" value="EuropeanDragon"> Strategically and with grace</label>
+        <label><input type="radio" name="q3" value="RedCap"> Ruthless and efficient</label>
+      </div>
+
+      <div class="question">
+        <h3>4. Choose a magical trait:</h3>
+        <label><input type="radio" name="q4" value="Golem"> Unshakable strength</label>
+        <label><input type="radio" name="q4" value="Phoenix"> Immortality</label>
+        <label><input type="radio" name="q4" value="AsianDragon"> Wisdom and good fortune</label>
+        <label><input type="radio" name="q4" value="Goblin"> Shapeshifting</label>
+      </div>
+
+      <button type="submit">Reveal My Creature!</button>
+    </form>
+
+    <div class="result" id="result">
+      <h2>You are a <span id="creatureName"></span>! 🐾</h2>
+      <img id="creatureImg" src="" alt="" style="max-width: 100%; height: auto; margin-top: 10px;">
+      <p id="creatureDesc"></p>
+    </div>
+  </main>
+
+  <script>
+    const creatureData = {
+      Phoenix: {
+        name: "Phoenix",
+        img: Phoenix.jpeg,
+        desc: "You rise from any challenge stronger than before. You're resilient, warm, and fiercely loyal."
+      },
+      Goblin: {
+        name: "Goblin",
+        img: Goblin.jpeg,
+        desc: "You're clever, cunning, and always one step ahead. Chaos follows where you go!"
+      },
+      Kraken: {
+        name: "Kraken",
+        img: Kraken.jpeg,
+        desc: "You're a powerful force lurking beneath calm waters. Mysterious and intense."
+      },
+      Werewolf: {
+        name: "Werewolf",
+        img: Werewolf.jpeg,
+        desc: "You have duality—calm and composed one moment, wild and fierce the next. Deeply loyal to your pack."
+      },
+      AsianDragon: {
+        name: "Asian Dragon",
+        img: AsianDragon.jpeg,
+        desc: "Wise and graceful, you're a symbol of good fortune and strength. You uplift others around you."
+      },
+      Fenrir: {
+        name: "Fenrir",
+        img: Fenrir.jpeg,
+        desc: "You're a lone wolf with untamed strength. You challenge limits and resist being chained."
+      },
+      Mummy: {
+        name: "Mummy",
+        img: Mummy.jpeg,
+        desc: "You're ancient and full of mystery. You guard your secrets closely and speak in riddles."
+      },
+      Roc: {
+        name: "Roc",
+        img: Roc.jpeg,
+        desc: "You have a soaring spirit and immense presence. Few can match your greatness."
+      },
+      Oni: {
+        name: "Oni",
+        img: Oni.jpeg,
+        desc: "You're fierce and bold, with elemental energy. You fight for what matters, no matter the odds."
+      },
+      Banshee: {
+        name: "Banshee",
+        img: Banshee.jpeg,
+        desc: "You're deeply emotional and connected to others. You feel the currents of fate before they come."
+      },
+      EuropeanDragon: {
+        name: "European Dragon",
+        img: EuropeanDragon.jpeg,
+        desc: "You're a noble guardian of treasure and wisdom. You move with grace and know your worth."
+      },
+      RedCap: {
+        name: "Red Cap",
+        img: RedCap.jpeg,
+        desc: "You walk a darker path with ruthless energy. You're sharp, cunning, and not afraid of bloodshed."
+      },
+      Golem: {
+        name: "Golem",
+        img: Golem.jpeg,
+        desc: "You are solid, dependable, and protect those you love with quiet strength."
+      }
+    };
+
+    document.getElementById("quizForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const answers = Array.from(document.querySelectorAll("input[type='radio']:checked")).map(el => el.value);
+      
+      // Count most frequent answer
+      const count = {};
+      answers.forEach(val => count[val] = (count[val] || 0) + 1);
+      const topCreature = Object.keys(count).reduce((a, b) => count[a] > count[b] ? a : b);
+
+      // Display result
+      const result = creatureData[topCreature];
+      document.getElementById("creatureName").textContent = result.name;
+      document.getElementById("creatureImg").src = result.img;
+      document.getElementById("creatureImg").alt = result.name;
+      document.getElementById("creatureDesc").textContent = result.desc;
+      document.getElementById("result").style.display = "block";
+    });
+  </script>
+</body>
+</html>
