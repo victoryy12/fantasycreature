@@ -8,17 +8,30 @@ const creatureImage = document.getElementById('creatureImage');
 const back = document.getElementById('back');
 
 const speciesImages = {
-AsianDragon: "images/AsianDragon.jpeg",
-EuropeanDragon: "images/EuropeanDragon.jpeg",
-Goblin: "images/Goblin.jpeg",
-Mummy: "images/Mummy.jpeg",
-Golem: "images/Golem.jpeg",
-Banshee: "images/Banshee.jpeg",
-RedCap: "images/RedCap.jpeg",
-Gollum: "images/Gollum.jpeg",
-Roc: "images/Roc.jpeg",
-Kraken: "images/Kraken.jpeg"
-}
+  AsianDragon: "images/AsianDragon.jpeg",
+  EuropeanDragon: "images/EuropeanDragon.jpeg",
+  Goblin: "images/Goblin.jpeg",
+  Mummy: "images/Mummy.jpeg",
+  Golem: "images/Golem.jpeg",
+  Banshee: "images/Banshee.jpeg",
+  RedCap: "images/RedCap.jpeg",
+  Gollum: "images/Gollum.jpeg",
+  Roc: "images/Roc.jpeg",
+  Kraken: "images/Kraken.jpeg"
+};
+
+const speciesDisplayNames = {
+  AsianDragon: "Asian Dragon",
+  EuropeanDragon: "European Dragon",
+  Goblin: "Goblin",
+  Mummy: "Mummy",
+  Golem: "Golem",
+  Banshee: "Banshee",
+  RedCap: "Red Cap",
+  Gollum: "Gollum",
+  Roc: "Roc",
+  Kraken: "Kraken"
+};
 
 infoForm.addEventListener('submit', function(event) {
   event.preventDefault();
@@ -28,41 +41,28 @@ infoForm.addEventListener('submit', function(event) {
   const ability = document.getElementById('ability').value;
   const origin = document.getElementById('origin').value;
 
-const speciesDisplayNames = {
-AsianDragon: "Asian Dragon",
-EuropeanDragon: "Euorpean Dragon",
-Goblin: "Goblin",
-Mummy: "Mummy",
-Golem: "Golem",
-Banshee: "Banshee",
-Redcap: "Red Cap",
-Gollum: "Gollum",
-Roc: "Roc",
-Kraken: "Kraken"
-}
-
-  const displaySpecies = speciesDisplayNames[species];
+  const displaySpecies = speciesDisplayNames[species] || species;
 
   creatureName.textContent = creature;
   speciesName.textContent = displaySpecies;
   abilityName.textContent = ability;
   originName.textContent = origin;
 
-const imageUrl = speciesImages[species];
-if (imageUrl) {
-  creatureImage.src = imageUrl;
-  creatureImage.alt = species + " image";
-  creatureImage.style.display = "block";
-} else {
-  creatureImage.style.display = "none"; 
-}
-infoForm.style.display = 'none';
+  const imageUrl = speciesImages[species];
+  if (imageUrl) {
+    creatureImage.src = imageUrl;
+    creatureImage.alt = species + " image";
+    creatureImage.style.display = "block";
+  } else {
+    creatureImage.style.display = "none";
+  }
 
-  infoCard.style.display = 'block';
+  infoForm.style.display = 'none';
   infoCard.style.display = 'block';
 });
 
-back.addEventListener('click', function() {
-    infoCard.style.display = 'none';    
-    infoForm.style.display = 'block';
+back.addEventListener('click', function () {
+  infoCard.style.display = 'none';
+  infoForm.style.display = 'block';
 });
+
