@@ -33,12 +33,12 @@ const speciesDisplayNames = {
   Kraken: "Kraken"
 };
 
+//lowercase key map
 const speciesKeyMap = {};
 for (const key in speciesImages) {
   speciesKeyMap[key.toLowerCase()] = key;
 }
 
-//lowercase key map
 infoForm.addEventListener('submit', function(event) {
   event.preventDefault();
 
