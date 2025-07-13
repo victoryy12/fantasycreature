@@ -14,7 +14,7 @@ Goblin: "images/Goblin.jpeg",
 Mummy: "images/Mummy.jpeg",
 Golem: "images/Golem.jpeg",
 Banshee: "images/Banshee.jpeg",
-RedCap: "images/Red Cap.jpeg",
+RedCap: "images/RedCap.jpeg",
 Gollum: "images/Gollum.jpeg",
 Roc: "images/Roc.jpeg",
 Kraken: "images/Kraken.jpeg"
@@ -30,7 +30,15 @@ infoForm.addEventListener('submit', function(event) {
 
 const speciesDisplayNames = {
 AsianDragon: "Asian Dragon",
-EuropeanDragon: "Euorpean Dragon"
+EuropeanDragon: "Euorpean Dragon",
+Goblin: "Goblin",
+Mummy: "Mummy",
+Golem: "Golem",
+Banshee: "Banshee",
+Redcap: "Red Cap",
+Gollum: "Gollum",
+Roc: "Roc",
+Kraken: "Kraken"
 }
 
   const displaySpecies = speciesDisplayNames[species];
