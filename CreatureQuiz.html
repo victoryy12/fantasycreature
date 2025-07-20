@@ -54,8 +54,37 @@
         <label><input type="radio" name="q4" value="Phoenix"> Immortality</label>
         <label><input type="radio" name="q4" value="AsianDragon"> Wisdom and good fortune</label>
         <label><input type="radio" name="q4" value="Goblin"> Shapeshifting</label>
+         <button type="button" class="next-btn">Next</button>
+      </div>
+
+      <div class="question" id ="question5">
+        <h3>5. What is your favorite activity at the gym?</h3>
+        <label><input type="radio" name="q5" value="Oni"> Lifting weights</label>
+        <label><input type="radio" name="q5" value="Phoenix"> Using the Sauna</label>
+        <label><input type="radio" name="q5" value="Banshee"> Running</label>
+        <label><input type="radio" name="q5" value="Mummy"> I don't workout</label>
+        <button type="button" class="next-btn">Next</button>
+      </div>
+
+      <div class="question" id ="question6">
+        <h3>6. What is your prefered form of transportation?</h3>
+        <label><input type="radio" name="q6" value="EuropeanDragon"> Private Jet</label>
+        <label><input type="radio" name="q6" value="Goblin"> Sports car</label>
+        <label><input type="radio" name="q6" value="Werewolf"> Walking</label>
+        <label><input type="radio" name="q6" value="Banshee"> Yacht</label>
+        <button type="button" class="next-btn">Next</button>
+      </div>
+
+      <div class="question" id ="question7">
+        <h3>7. Favorite movie genre?</h3>
+        <label><input type="radio" name="q7" value="Banshee"> Horror</label>
+        <label><input type="radio" name="q7" value="EuropeanDragon"> Action</label>
+        <label><input type="radio" name="q7" value="Oni"> Thriller</label>
+        <label><input type="radio" name="q7" value="Mummy"> Comedy</label>
         <button type="submit">Reveal My Creature!</button>
       </div>
+
+      
     </form>
   <script>
 var questions = document.querySelectorAll('.question');
@@ -87,11 +116,6 @@ for (var i = 0; i < nextButtons.length; i++) {
 }
 </script>
 
-    <div class="result" id="result">
-      <h2>You are a <span id="creatureName"></span>! 🐾</h2>
-      <img id="creatureImg" src="" alt="" style="max-width: 100%; height: auto; margin-top: 10px;">
-      <p id="creatureDesc"></p>
-    </div>
   </main>
 
   <script>
@@ -174,11 +198,8 @@ for (var i = 0; i < nextButtons.length; i++) {
 
       // Display result
       const result = creatureData[topCreature];
-      document.getElementById("creatureName").textContent = result.name;
-      document.getElementById("creatureImg").src = result.img;
-      document.getElementById("creatureImg").alt = result.name;
-      document.getElementById("creatureDesc").textContent = result.desc;
-      document.getElementById("result").style.display = "block";
+      localStorage.setItem("quizResult", JSON.stringify(result));
+      window.location.href = "results.html";
     });
   </script>
       <footer>
